@@ -9,6 +9,9 @@
       href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,15 +32,15 @@
         <form>
           <input
             type="text"
-            placeholder="Daily nail tips"
+            placeholder="Daily beauty tips"
             autofocus
             required
             autocomplete="off"
           />
-          <button>Generate Another Tip</button>
+          <button type="submit">Generate Another Tip</button>
         </form>
 
-        <div class="contents">
+        <div class="contents" id="contents">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 
           <br />
