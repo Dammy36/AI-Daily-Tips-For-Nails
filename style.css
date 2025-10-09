@@ -1,4 +1,31 @@
 body {
-  background: black;
-  color: white;
+  background: #fadadd;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  background: white;
+  border-radius: 10px;
+  margin: 50px auto;
+  color: black;
+  padding: 10px;
+}
+
+h1,
+h2 {
+  font-family: "Playfair", serif;
+  font-weight: 400;
+  color: #333;
+}
+h2 {
+  font-weight: 800;
+}
+
+.contents {
+  line-height: 1.5;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #555;
 }
