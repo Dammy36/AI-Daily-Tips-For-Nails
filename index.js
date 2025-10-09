@@ -3,7 +3,7 @@ function showResult(response) {
   new Typewriter("#contents", {
     strings: [chatResponse],
     autoStart: true,
-    delay: 10,
+    delay: 40,
     cursor: "",
   });
 }
@@ -18,7 +18,7 @@ const formElement = document
     const apiKey = "ft2ff28777530dba3dddb311o0464bef";
     const prompt = `Generate anything that has to do with Beauty tips  ${input}`;
     const context =
-      " when asked HI respond with a greeting and ask what they need for today and wait for their questions  Just give three precise answers and be accurate let it be in basic HTML and separate each answer with a <br/> let the answer start from another paragraph, mke the title bold and sign by Damsel Nails AI inside <strong> element at the end of the sentense NOT at the begining in a new paragraph";
+      "Give three precise answers and be accurate. let it be in basic HTML and separate each answer with a <br/> let the answer start from another paragraph, make the title bold and sign by Damsel Nails AI inside <strong> element at the end of the sentense NOT at the begining in a new paragraph";
     const apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
     let contentElements = document.getElementById("contents");
