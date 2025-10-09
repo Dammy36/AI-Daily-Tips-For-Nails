@@ -1,31 +1,25 @@
-/*function showResult(response){
-const chatResponse = response.data.answer
-new Typewriter('#contents', {
-  strings: [chatResponse],
-  autoStart: true,
-  delay:10,
-  cursor:"",
-});
-}*/
+function showResult(response) {
+  const chatResponse = response.data.answer;
+  new Typewriter("#contents", {
+    strings: [chatResponse],
+    autoStart: true,
+    delay: 10,
+    cursor: "",
+  });
+}
 
 const formElement = document
   .getElementById("form-generate")
   .addEventListener("submit", (event) => {
     event.preventDefault();
 
-    new Typewriter("#contents", {
-      strings: ["damilola osyemi"],
-      autoStart: true,
-      delay: 10,
-      cursor: "",
-    });
+    const input = document.querySelector("input").value;
 
-    /*const input = document.querySelector("input").value
+    const apiKey = "ft2ff28777530dba3dddb311o0464bef";
+    const prompt = `Generate anything that has to do with Beauty tips  ${input}`;
+    const context =
+      " when asked HI respond with a greeting and ask what they need for today and wait for their questions  Just give three precise answers and be accurate let it be in basic HTML and separate each answer with a <br/> let the answer start from another paragraph, mke the title bold and sign by Damsel Nails AI inside <strong> element at the end of the sentense NOT at the begining in a new paragraph";
+    const apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-const apiKey =""
-const prompt =""
-const context =""
-const apiUrl =""
-
-axios.get().then(showResult)*/
+    axios.get(apiUrl).then(showResult);
   });
