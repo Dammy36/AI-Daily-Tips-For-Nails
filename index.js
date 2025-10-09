@@ -21,5 +21,8 @@ const formElement = document
       " when asked HI respond with a greeting and ask what they need for today and wait for their questions  Just give three precise answers and be accurate let it be in basic HTML and separate each answer with a <br/> let the answer start from another paragraph, mke the title bold and sign by Damsel Nails AI inside <strong> element at the end of the sentense NOT at the begining in a new paragraph";
     const apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+    let contentElements = document.getElementById("contents");
+    contentElements.classList.remove("hidden");
+    contentElements.innerHTML = `<div class="blink">Generating.. ${input}</div>`;
     axios.get(apiUrl).then(showResult);
   });
